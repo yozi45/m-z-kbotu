@@ -46,6 +46,7 @@ module.exports = {
     
       queue.textChannel.send(
         new Discord.MessageEmbed()
+                                .setColor("RED")
         .setAuthor('Oynatılıyor!',message.author.avatarURL({format : "png",dynamic : true}))
         .setTitle(song.title)
         .setURL(song.url)
@@ -56,7 +57,8 @@ module.exports = {
         .addField('👍',song.likes.trues,true)
         .addField('👎',song.likes.falses,true)
       
-      
+                             .setImage("https://cdn.discordapp.com/attachments/852867627688919060/879312111694663680/unknown.png")
+
       
       )
     
