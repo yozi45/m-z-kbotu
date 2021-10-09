@@ -3,11 +3,11 @@ const discord = require("discord.js")
 const client = new discord.Client({ disableEveryone: true, disabledEvents: ["TYPING_START"] });
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const { TOKEN, PREFIX } = require("./config.json")
+const { PREFIX } = require("./config.json")
 
 
 client.on("ready", () => {
-  console.log('Ready TO play some soft songs')
+  console.log('Şarkı Dinlemeye Hazır')
   client.user.setActivity("!yardım")
 })
 
@@ -52,4 +52,4 @@ client.on("message", message => {
   
 });
 
-client.login(TOKEN)
+client.login(process.env.TOKEN)

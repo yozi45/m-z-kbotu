@@ -5,6 +5,8 @@ module.exports = {
   description: "yardım",
   execute(client, message) {
   message.channel.send(new Discord.MessageEmbed()
+                        .setColor("RED")
+
                       .setDescription(
     `
 \`${PREFIX}oynat <şarkı-adı>\` : **Bir Şarkıyı Oynatır.**
@@ -18,6 +20,9 @@ module.exports = {
 
 
 `)
+                       .setImage("https://cdn.discordapp.com/attachments/852867627688919060/879312111694663680/unknown.png")
+                         .setFooter(`*                                     ${client.user.username} | © 2021                                             *`)
+
                       )    
 }
 }
